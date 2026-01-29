@@ -13,12 +13,14 @@ const projects = [
     description: 'Ranking and competition management system for billiard players and clubs.',
     status: 'Active' as const,
     link: '#',
+    logo: '/projects/logo-billiardrank.png',
   },
   {
     title: 'MinimaFinance',
-    description: 'Minimalist finance tracking and analysis tool focused on clarity and control.',
-    status: 'In Development' as const,
-    link: '#',
+    description: 'Monitor your finances with ease. Track daily spending with intuitive grid charts, custom categories, and bill reminders — all with privacy-first local storage.',
+    status: 'Active' as const,
+    link: 'https://minimafinance.app',
+    logo: '/projects/logo-minimafinance.svg',
   },
   {
     title: 'Client Projects',
@@ -31,7 +33,7 @@ const projects = [
 export function ProjectsSection() {
   return (
     <section className="py-10 px-4 sm:px-6">
-      <div className="max-w-xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         {/* Section Header */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -69,6 +71,7 @@ export function ProjectsSection() {
               description={project.description}
               status={project.status}
               link={project.link}
+              logo={project.logo}
               index={index}
             />
           ))}

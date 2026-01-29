@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin } from 'lucide-react';
 
 interface SocialBadgeProps {
   platform: string;
@@ -7,14 +6,14 @@ interface SocialBadgeProps {
   index: number;
 }
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  'GitHub': Github,
-  'X/Twitter': Twitter,
-  'LinkedIn': Linkedin,
+const iconMap: Record<string, string> = {
+  'GitHub': '/socials/logo-github.svg',
+  'X/Twitter': '/socials/logo-x:twitter.svg',
+  'LinkedIn': '/socials/logo-linkedin.svg',
 };
 
 export function SocialBadge({ platform, url, index }: SocialBadgeProps) {
-  const Icon = iconMap[platform];
+  const iconSrc = iconMap[platform];
 
   return (
     <motion.a
@@ -32,7 +31,13 @@ export function SocialBadge({ platform, url, index }: SocialBadgeProps) {
       whileTap={{ scale: 0.95 }}
       className="inline-flex items-center gap-2 px-3 py-1.5 border border-border rounded-full text-sm text-foreground hover:bg-secondary transition-colors duration-200"
     >
-      {Icon && <Icon className="w-4 h-4" />}
+      {iconSrc && (
+        <img
+          src={iconSrc}
+          alt={platform}
+          className="w-4 h-4 object-contain"
+        />
+      )}
       <span>{platform}</span>
     </motion.a>
   );

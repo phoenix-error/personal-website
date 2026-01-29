@@ -13,7 +13,7 @@ export function Footer() {
       }}
       className="py-6 px-4 sm:px-6 border-t border-border"
     >
-      <div className="max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
         {/* Copyright */}
         <p className="text-xs text-muted-foreground flex items-center gap-1">
           © {new Date().getFullYear()} Built with{' '}

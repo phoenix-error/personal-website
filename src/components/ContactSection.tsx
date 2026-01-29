@@ -41,7 +41,7 @@ export function ContactSection() {
           <p className="text-sm text-foreground">
             Or book a call on{' '}
             <a
-              href="https://cal.com"
+              href="https://cal.eu/lucabecker"
               target="_blank"
               rel="noopener noreferrer"
               className="text-amber-500 link-underline-static hover:text-amber-600 transition-colors"

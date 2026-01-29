@@ -98,12 +98,17 @@ module.exports = {
           "0%, 100%": { opacity: "1", transform: "scale(1)" },
           "50%": { opacity: "0.7", transform: "scale(1.1)" },
         },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.4", transform: "scale(1)" },
+          "50%": { opacity: "0.7", transform: "scale(1.15)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
         "pulse-dot": "pulse-dot 2s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
       },
     },
   },

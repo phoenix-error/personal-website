@@ -10,7 +10,7 @@ const socialLinks = [
 export function SocialSection() {
   return (
     <section className="py-10 px-4 sm:px-6">
-      <div className="max-w-xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         {/* Section Header */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
