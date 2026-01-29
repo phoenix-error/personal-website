@@ -1,10 +1,9 @@
 import {
   Terminal,
-  AnimatedSpan,
   TypingAnimation,
 } from "@/components/ui/terminal";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Home } from "lucide-react";
+import { Home } from "lucide-react";
 
 export function NotFound() {
   return (
