@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ProjectCard } from './ProjectCard';
 
@@ -11,7 +13,7 @@ const projects = [
   {
     title: 'BilliardRank',
     description: 'Ranking and competition management system for billiard players and clubs.',
-    status: 'Active' as const,
+    status: 'In Development' as const,
     link: '#',
     logo: '/projects/logo-billiardrank.png',
   },

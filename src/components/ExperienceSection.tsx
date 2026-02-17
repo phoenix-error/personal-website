@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Briefcase, MapPin, Calendar, ExternalLink, GraduationCap } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -16,6 +18,7 @@ const experiences = [
     title: 'Werkstudent',
     company: 'DATEV eG',
     url: 'https://www.datev.de',
+    logo: '/experience/logo-datev.svg',
     type: 'Work Study',
     period: 'Jun 2021 - Apr 2025',
     duration: '3 yrs 11 mos',
@@ -72,7 +75,15 @@ export function ExperienceSection() {
             >
               <div className="flex items-start gap-3">
                 <div className="mt-0.5">
-                  <Briefcase className="w-4 h-4 text-muted-foreground" />
+                  {experience.logo ? (
+                    <img
+                      src={experience.logo}
+                      alt={experience.company}
+                      className="w-4 h-4 object-contain rounded-sm"
+                    />
+                  ) : (
+                    <Briefcase className="w-4 h-4 text-muted-foreground" />
+                  )}
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="text-sm font-semibold text-foreground">
